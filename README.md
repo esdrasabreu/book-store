@@ -63,7 +63,7 @@ Corpo da solicitação:
 
 {
   "Name": "Livro Exemplo",
-  "ISBN": 11111111,
+  "ISBN": 1234567891012,
   "Value": 19.99
 }
 
@@ -71,6 +71,6 @@ Corpo da solicitação:
 
 {
   "Name": "Livro Atualizado",
-  "ISBN": 22222222,
+  "ISBN": 1234567891012,
   "Value": 20.99
 }
