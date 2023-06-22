@@ -23,7 +23,7 @@ php artisan migrate
 5. Inicie o servidor de desenvolvimento local:
 
 ## Rotas da API
-
+### localhost:8000/api/book/
 - `GET /book`: Retorna todos os livros cadastrados.
 - `GET /book/{id}`: Retorna os detalhes de um livro específico pelo seu ID.
 - `POST /book`: Cria um novo livro.
@@ -57,6 +57,11 @@ Corpo da solicitação:
 
 - Para obter todos os livros cadastrados: GET /book
 - Para obter os detalhes de um livro específico pelo ID: GET /book/{id}
+  
+- Para obter os detalhes de um livro específico pelo Name: GET /book/name/{name}
+- Para obter os detalhes de um livro específico pelo ISBN: GET /book/isbn/{isbn}
+- Para obter os detalhes de um livro específico pelo Value: GET /book/value/{min}/{max}
+  
 - Para criar um novo livro: POST /book
 
 Corpo da solicitação:
