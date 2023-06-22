@@ -21,7 +21,7 @@ class BookFactory extends Factory
         $faker = Faker::create();
         return [
             'Name' => $faker->sentence(3),
-            'ISBN' => $faker->numerify('########'),
+            'ISBN' => $faker->numerify('#############'),
             'Value' => $faker->randomFloat(2, 0, 100),
         ];
     }

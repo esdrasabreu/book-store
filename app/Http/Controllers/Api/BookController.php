@@ -21,9 +21,9 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'ISBN' => 'required|digits:11',
-            'value' => 'required|numeric',
+            'Name' => 'required',
+            'ISBN' => 'required|digits:13',
+            'Value' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
@@ -51,9 +51,9 @@ class BookController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'Name' => 'required',
             'ISBN' => 'required|digits:11',
-            'value' => 'required|numeric',
+            'Value' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
