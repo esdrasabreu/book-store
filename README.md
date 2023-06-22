@@ -24,11 +24,11 @@ php artisan migrate
 
 ## Rotas da API
 
-- `GET /books`: Retorna todos os livros cadastrados.
-- `GET /books/{id}`: Retorna os detalhes de um livro específico pelo seu ID.
-- `POST /books`: Cria um novo livro.
-- `PUT /books/{id}`: Atualiza um livro existente pelo seu ID.
-- `DELETE /books/{id}`: Exclui um livro existente pelo seu ID.
+- `GET /book`: Retorna todos os livros cadastrados.
+- `GET /book/{id}`: Retorna os detalhes de um livro específico pelo seu ID.
+- `POST /book`: Cria um novo livro.
+- `PUT /book/{id}`: Atualiza um livro existente pelo seu ID.
+- `DELETE /book/{id}`: Exclui um livro existente pelo seu ID.
 
 
 ## Autenticação
@@ -39,7 +39,6 @@ Para isso precisa cadastrar um usuário : POST /user
 
 Corpo da solicitação:
 
-```json
 {
   "name": "Nome do Usuário",
   "email": "email@example.com",
@@ -56,13 +55,12 @@ Corpo da solicitação:
 
 ## Exemplos de Uso
 
-- Para obter todos os livros cadastrados: GET /books
-- Para obter os detalhes de um livro específico pelo ID: GET /books/{id}
-- Para criar um novo livro: POST /books
+- Para obter todos os livros cadastrados: GET /book
+- Para obter os detalhes de um livro específico pelo ID: GET /book/{id}
+- Para criar um novo livro: POST /book
 
 Corpo da solicitação:
 
-```json
 {
   "Name": "Livro Exemplo",
   "ISBN": 11111111,
