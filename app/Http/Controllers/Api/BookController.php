@@ -52,7 +52,7 @@ class BookController extends Controller
 
         $validator = Validator::make($request->all(), [
             'Name' => 'required',
-            'ISBN' => 'required|digits:11',
+            'ISBN' => 'required|digits:13',
             'Value' => 'required|numeric',
         ]);
 
@@ -85,15 +85,15 @@ class BookController extends Controller
         return response()->json($books, 200);
     }
 
-    public function searchByValue(Request $request, float $value)
+    public function searchByValueRange(Request $request, float $minValue, float $maxValue)
     {
-        $books = Book::where('value', $value)->get();
+    $books = Book::whereBetween('value', [$minValue, $maxValue])->get();
 
-        if ($books->isEmpty()) {
-            return response()->json(['error' => 'No books found with the given value'], 404);
-        }
+    if ($books->isEmpty()) {
+        return response()->json(['error' => 'No books found within the given value range'], 404);
+    }
 
-        return response()->json($books, 200);
+    return response()->json($books, 200);
     }
 
     public function searchByISBN(Request $request, string $isbn)

@@ -18,9 +18,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/book/{id}', [BookController::class, 'show']);
 
-    Route::get('/books/search/name/{name}', [BookController::class, 'searchByName']);
-    Route::get('/books/search/value/{value}', [BookController::class, 'searchByValue']);
-    Route::get('/books/search/isbn/{isbn}', [BookController::class, 'searchByISBN']);
+    Route::get('/book/name/{name}', [BookController::class, 'searchByName']);
+    Route::get('/book/value/{minValue}/{maxValue?}', [BookController::class, 'searchByValueRange']);
+    Route::get('/book/isbn/{isbn}', [BookController::class, 'searchByISBN']);
     
     Route::put('/book/{id}', [BookController::class, 'update']);
 });
